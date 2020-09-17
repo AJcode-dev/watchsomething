@@ -85,10 +85,11 @@
 
                 <div>
                 <div class="col-md-4">
-                    <form class="form-inline">
-                      <input type="text" id="fname" name="fname">
+                    <form class="form-inline" method="post" action="{{route('post.usersub')}}">
+                    @csrf
+                      <input type="text" id="msisdn" name="msisdn">
                       
-                      <button class="btn">Subscribe</button>
+                      <button class="btn" type="submit">Subscribe</button>
                     </form>  
                 <div>
                 <div class="col-md-4">

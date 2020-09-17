@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\SubscribeController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +11,18 @@ use App\Http\Controllers\SubscribeController;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+ */
 
 Route::get('/', function () {
     return view('welcome');
 });
 Route::get('subscription', 'SubscriptionController@index')->name('me.subscribe');
+Route::post('checksub', 'SubscriptionController@checkSubscriber')->name('post.check');
+Route::post('usersubscribe', 'SubscriptionController@subScribeUser')->name('post.usersub');
 Route::get('video', 'VideoController@index')->name('me.video');
 
 // Route::get('userallow', 'VideoWatchController@getVids');
 
-Route::get('checksub', 'SubscriptionContoller@checkSubscribe');
+// Route::post('checksub', 'SubscriptionContoller@checkSubscribe')->name('post.check');
 
-Route::get('subscribe', 'SubscriptionContoller@subScribeUser');
+// Route::post('subscribe', 'SubscriptionContoller@subScribeUser')->name('post.subs');

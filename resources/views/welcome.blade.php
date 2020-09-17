@@ -85,8 +85,9 @@
 
                 <div>
                 <div class="col-md-4">
-                    <form class="form-inline">
-                      <input type="text" id="fname" name="fname">
+                    <form class="form-inline" method="post" action="{{route('post.check')}}">
+                    @csrf
+                      <input type="text" id="msisdn" name="msisdn">
                       
                       <button class="btn" type="submit">Send</button>
                     </form>  
