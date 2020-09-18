@@ -22,20 +22,19 @@ class SubscriptionController extends Controller
             "msisdn" => $request->input('msisdn'),
             "carrier" => "mtn"];
 
+        
         $response = Http::withHeaders([
             'Accept' => 'application/json',
             'Content-Type' => 'application/json',
         ])->post('http://pro.jobsdotgo.com/api/v1/check/subscribe-status', $sampData);
 
-            $userSubscribeState = $response['data']['subscription_state'];
+        
+        $userSubscribeState = $response['data']['subscription_state'];
 
             if ($userSubscribeState) {
-                return view('me.video');
+                return view('video');
             }
-            return view('me.subscription');
-
-
-
+            return view('subscription');
     }
 
     public function subScribeUser(Request $request)

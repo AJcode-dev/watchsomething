@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
-    <h2>Allow User to Watch</h2>
-</body>
+    <body>
+        <h2>Allow User to Watch</h2>
+    </body>
 </html>
